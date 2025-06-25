@@ -97,16 +97,18 @@
 
   <section id="facility" class="fade-in" class="container">
     <h2>Manufacturing Facility</h2>
-    <div class="grid">
-      <img src="images/lab1.jpg" alt="Lab" />
-      <img src="images/lab2.jpg" alt="Passage" />
-    </div>
-    <ul>
-      <li>GMP-compliant production lines</li>
-      <li>Advanced QC/QA labs</li>
-      <li>Trained professionals with deep process knowledge</li>
-      <li>Robust environmental and safety controls</li>
-    </ul>
+    
+<div class="gallery">
+  <img src="images/lab1.jpg" alt="Lab Facility 1" onclick="showLightbox(this.src)" />
+  <img src="images/lab2.jpg" alt="Lab Facility 2" onclick="showLightbox(this.src)" />
+</div>
+<ul>
+  <li>GMP-compliant production lines</li>
+  <li>Advanced QC/QA labs</li>
+  <li>Trained professionals with deep process knowledge</li>
+  <li>Robust environmental and safety controls</li>
+</ul>
+
   </section>
 
   <section id="quality" class="fade-in" class="container">
@@ -141,5 +143,53 @@
   </footer>
 
   <script src="script.js"></script>
+
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.gallery img {
+  width: 48%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.03);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+</style>
+<script>
+function showLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.style.display = 'flex';
+}
+function hideLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+<div id="lightbox" class="lightbox" onclick="hideLightbox()">
+  <img id="lightbox-img" src="" alt="preview" />
+</div>
 </body>
 </html>

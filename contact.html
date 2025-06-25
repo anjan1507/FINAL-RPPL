@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Religence Pharmaceuticals Pvt. Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Religence Pharmaceuticals Pvt. Ltd.</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container fade-in">
+    
+<h2>Contact Us</h2>
+<form id="contact-form" action="https://formspree.io/f/xwkgnjra" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="_replyto" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+<p id="form-status"></p>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("form-status").innerText = "Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      document.getElementById("form-status").innerText = "Oops! Something went wrong.";
+    }
+  });
+});
+</script>
+<p><strong>Address:</strong><br />
+C-56, Saykha Industrial Estate, Taluka: Vagra,<br />
+District: Bharuch – 392140, Gujarat, India<br />
+Phone: +91-9998916797<br />
+Email: info@religence.in</p>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Religence Pharmaceuticals Pvt. Ltd. All rights reserved.
+  </footer>
+</body>
+</html>

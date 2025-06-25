@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Religence Pharmaceuticals Pvt. Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1 class="logo">Religence Pharmaceuticals Pvt. Ltd.</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="facility.html">Facility</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container fade-in">
+    
+<h2>Our Manufacturing Facility</h2>
+<div class="gallery">
+  <img src="images/lab1.jpg" alt="Lab Facility 1" onclick="showLightbox(this.src)" />
+  <img src="images/lab2.jpg" alt="Lab Facility 2" onclick="showLightbox(this.src)" />
+</div>
+<ul>
+  <li>GMP-compliant production lines</li>
+  <li>Advanced QC/QA labs</li>
+  <li>Trained professionals with deep process knowledge</li>
+  <li>Robust environmental and safety controls</li>
+</ul>
+
+<div id="lightbox" class="lightbox" onclick="hideLightbox()">
+  <img id="lightbox-img" src="" alt="preview" />
+</div>
+<script>
+function showLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.style.display = 'flex';
+}
+function hideLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+<style>
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.gallery img {
+  width: 48%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.03);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+</style>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Religence Pharmaceuticals Pvt. Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
