@@ -4,95 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Religence Pharmaceuticals Pvt. Ltd.</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #222; }
-    header { background: url('LAB1.JPG') no-repeat center center/cover; padding: 100px 20px; color: white; text-align: center; }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; }
-    header .btns { margin-top: 20px; }
-    header button { margin: 5px; padding: 10px 20px; font-size: 1em; background-color: #2d2daa; color: white; border: none; border-radius: 4px; cursor: pointer; }
-
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { color: #2d2daa; }
-    .grid { display: flex; flex-wrap: wrap; gap: 20px; }
-    .grid img { max-width: 100%; border-radius: 8px; }
-
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background-color: #f0f0f0; }
-
-    footer { background-color: #f8f8f8; text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>High-Quality API Manufacturing for a Healthier India</h1>
-    <div class="btns">
-      <button>View Products</button>
-      <button>Contact Us</button>
+  <header class="hero">
+    <div class="overlay">
+      <h1>High-Quality API Manufacturing for a Healthier India</h1>
+      <div class="btns">
+        <a href="#products" class="btn">View Products</a>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
     </div>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p><strong>Religence Pharmaceuticals Private Limited</strong> is a leading Indian manufacturer of Active Pharmaceutical Ingredients (APIs) committed to quality, regulatory compliance, and customer satisfaction.</p>
-  </section>
-
-  <section>
-    <h2>Our Products</h2>
-    <p>We specialize in the development and manufacturing of a wide range of Active Pharmaceutical Ingredients.</p>
-    <table>
-      <tr>
-        <th>API Name</th>
-        <th>CAS No.</th>
-        <th>Therapeutic Use</th>
-      </tr>
-      <tr>
-        <td>Methylprednisolone</td>
-        <td>83-43-2</td>
-        <td>Anti-inflammatory</td>
-      </tr>
-      <tr>
-        <td>Budesonide</td>
-        <td>51333-22-3</td>
-        <td>Asthma</td>
-      </tr>
-      <!-- Add more rows as needed -->
-    </table>
-  </section>
-
-  <section>
-    <h2>Manufacturing Facility</h2>
-    <div class="grid">
-      <img src="LAB2.JPG" alt="Lab Image" />
-      <img src="PASSAGE.JPG" alt="Passage Image" />
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p><strong>Religence Pharmaceuticals Private Limited</strong> is a leading Indian manufacturer of Active Pharmaceutical Ingredients (APIs) committed to quality, regulatory compliance, and customer satisfaction.</p>
     </div>
-    <ul>
-      <li>GMP-compliant production lines</li>
-      <li>Advanced QC/QA labs</li>
-      <li>Trained professionals with deep process knowledge</li>
-      <li>Robust environmental and safety controls</li>
-    </ul>
   </section>
 
-  <section>
-    <h2>Quality Assurance</h2>
-    <ul>
-      <li>Stringent raw material testing</li>
-      <li>In-process checks</li>
-      <li>Final product analysis</li>
-      <li>Regulatory documentation</li>
-    </ul>
+  <section id="products">
+    <div class="container">
+      <h2>Our Products</h2>
+      <p>We specialize in developing and manufacturing a wide range of high-quality APIs.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>API Name</th>
+            <th>CAS No.</th>
+            <th>Therapeutic Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Methylprednisolone</td><td>83-43-2</td><td>Anti-inflammatory</td></tr>
+          <tr><td>Budesonide</td><td>51333-22-3</td><td>Asthma</td></tr>
+          <tr><td>Betamethasone Sodium Phosphate</td><td>151-73-5</td><td>Anti-inflammatory</td></tr>
+          <tr><td>Dexamethasone</td><td>50-02-2</td><td>Anti-inflammatory / Corticosteroid</td></tr>
+          <tr><td>Prednisolone</td><td>50-24-8</td><td>Immunosuppressant</td></tr>
+          <tr><td>Triamcinolone</td><td>124-94-7</td><td>Allergic disorders</td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact Us</h2>
-    <p>
-      <strong>Religence Pharmaceuticals Pvt. Ltd.</strong><br />
+  <section id="facility">
+    <div class="container">
+      <h2>Manufacturing Facility</h2>
+      <div class="grid">
+        <img src="images/lab1.jpg" alt="Lab Image" />
+        <img src="images/lab2.jpg" alt="Passage Image" />
+      </div>
+      <ul>
+        <li>GMP-compliant production lines</li>
+        <li>Advanced QC/QA labs</li>
+        <li>Trained professionals with deep process knowledge</li>
+        <li>Robust environmental and safety controls</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="quality">
+    <div class="container">
+      <h2>Quality Assurance</h2>
+      <ul>
+        <li>Stringent raw material testing</li>
+        <li>In-process quality checks</li>
+        <li>Comprehensive final product analysis</li>
+        <li>Proper regulatory documentation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p><strong>Religence Pharmaceuticals Pvt. Ltd.</strong><br />
       C-56, Saykha Industrial Estate,<br />
       Taluka: Vagra, District: Bharuch – 392140, Gujarat, India<br />
       Phone: +91-XXXXXXXXXX<br />
-      Email: info@religence.in
-    </p>
+      Email: info@religence.in</p>
+    </div>
   </section>
 
   <footer>
