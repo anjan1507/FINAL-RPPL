@@ -1,7 +1,10 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
   color: #222;
   line-height: 1.6;
 }
@@ -10,35 +13,68 @@ body {
   margin: auto;
   padding: 40px 20px;
 }
-h1, h2 {
-  color: #2d2daa;
+nav {
+  background-color: #2d2daa;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  color: #fff;
+  font-size: 1.5em;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
 }
 .hero {
   background: url('images/banner.jpg') no-repeat center center/cover;
-  height: 100vh;
+  height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
   text-align: center;
-  color: white;
 }
 .hero .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.6);
   padding: 40px;
-  border-radius: 12px;
-}
-.btns {
-  margin-top: 20px;
+  border-radius: 10px;
+  color: #fff;
 }
 .btn {
-  background-color: #2d2daa;
-  color: white;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #2d2daa;
   padding: 10px 20px;
-  margin: 5px;
+  border: none;
   text-decoration: none;
-  border-radius: 4px;
-  display: inline-block;
+  border-radius: 5px;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #2d2daa;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+th {
+  background-color: #f4f4f4;
 }
 .grid {
   display: flex;
@@ -49,23 +85,28 @@ h1, h2 {
   width: 48%;
   border-radius: 8px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-th, td {
-  border: 1px solid #ccc;
+form input, form textarea {
   padding: 10px;
-  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-th {
-  background-color: #f0f0f0;
+form button {
+  width: fit-content;
+  background-color: #2d2daa;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
 }
 footer {
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
   text-align: center;
   padding: 20px;
-  font-size: 0.9em;
   color: #666;
 }
