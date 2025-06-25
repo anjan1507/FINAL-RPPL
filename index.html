@@ -16,6 +16,20 @@
   to { opacity: 1; }
 }
 </style>
+
+<style>
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 </head>
 <body>
   <nav>
@@ -107,12 +121,14 @@
 
   <section id="contact" class="fade-in" class="container">
     <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    
+<form id="contact-form" action="https://formspree.io/f/xwkgnjra" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="_replyto" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
     <p><strong>Address:</strong><br />
     C-56, Saykha Industrial Estate, Taluka: Vagra,<br />
     District: Bharuch – 392140, Gujarat, India<br />
