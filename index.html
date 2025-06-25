@@ -6,11 +6,21 @@
   <title>Religence Pharmaceuticals Pvt. Ltd.</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/logo.png" />
+
+<style>
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
 </head>
 <body>
   <nav>
     <div class="container">
-      <h1 class="logo">Religence Pharmaceuticals Pvt. Ltd.</h1>
+      <h1 class="logo">Religence</h1>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#products">Products</a></li>
@@ -28,13 +38,13 @@
     </div>
   </header>
 
-  <section id="about" class="container">
+  <section id="about" class="fade-in" class="container">
     <h2>About Us</h2>
     <img src="images/logo.png" alt="Religence Logo" style="max-width: 150px; margin-bottom: 20px;" />
     <p><strong>Religence Pharmaceuticals Private Limited is a pharmaceutical company focused on developing high-quality Active Pharmaceutical Ingredients (APIs) to serve healthcare needs across India and globally. With robust manufacturing practices and a passion for innovation, we stand committed to regulatory compliance, quality, and client satisfaction.</strong> is a leading Indian manufacturer of Active Pharmaceutical Ingredients (APIs) committed to quality, regulatory compliance, and customer satisfaction.</p>
   </section>
 
-  <section id="products" class="container">
+  <section id="products" class="fade-in" class="container">
     <h2>Our Products</h2>
     <table>
       <thead>
@@ -71,7 +81,7 @@
     </table>
   </section>
 
-  <section id="facility" class="container">
+  <section id="facility" class="fade-in" class="container">
     <h2>Manufacturing Facility</h2>
     <div class="grid">
       <img src="images/lab1.jpg" alt="Lab" />
@@ -85,7 +95,7 @@
     </ul>
   </section>
 
-  <section id="quality" class="container">
+  <section id="quality" class="fade-in" class="container">
     <h2>Quality Assurance</h2>
     <ul>
       <li>Stringent raw material testing</li>
@@ -95,7 +105,7 @@
     </ul>
   </section>
 
-  <section id="contact" class="container">
+  <section id="contact" class="fade-in" class="container">
     <h2>Contact Us</h2>
     <form id="contact-form">
       <input type="text" placeholder="Your Name" required />
